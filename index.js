@@ -56,20 +56,21 @@ function buildTypeDef(prop) {
   if(mappedType !== null) {
     return mappedType;
   }
-
-  if(prop.type === 'array') {
+  else if(prop.type === 'array') {
     let itemsType = mapType(prop.items.type);
     if(itemsType !== null) {
       return `${itemsType}[]`;
     }
-
-    if(prop.items.$ref !== void 0) {
+    else if(prop.items.$ref !== void 0) {
       // it's an object
       return `${getObjectName(prop.items.$ref)}[]`;
     }
+    else {
+      return 'any[]';
+    }
   }
 
-  return 'notMapped'
+  return 'any'
 }
 
 function getObjectName(ref) {
@@ -82,6 +83,8 @@ function mapType(type) {
     case 'string':
       return 'string'
     case 'integer':
+      return 'number'
+    case 'double':
       return 'number'
     case 'boolean':
       return 'boolean'
