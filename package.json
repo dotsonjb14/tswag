@@ -1,6 +1,6 @@
 {
   "name": "tswag",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^2.17.1",
     "request": "^2.88.0"
