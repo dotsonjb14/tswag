@@ -1,8 +1,12 @@
 {
   "name": "tswag",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dotsonjb14/tswag.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
