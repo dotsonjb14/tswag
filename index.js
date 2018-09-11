@@ -84,7 +84,7 @@ function mapType(type) {
       return 'string'
     case 'integer':
       return 'number'
-    case 'double':
+    case 'number':
       return 'number'
     case 'boolean':
       return 'boolean'
